@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Loja do Viajante | Jornada Viagens</title>
+    <!-- Configuração do css externo -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Bootstrap Icons: biblioteca de ícones -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+</head>
+
+ <body class="d-flex flex-column min-vh-100"> 
+    <header class="container-fluid bg-primary text-white text-center p-4">
+        <h1>Jornada Viagens</h1>
+        <p>Pacotes de viagem!✈️🌍</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Menu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" target="_blank">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html" target="_blank">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pacotes.html" target="_blank">Pacotes de Viagens</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Informações</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="loja.html" target="_blank">Loja</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Formulários
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="contato.html">Contato</a></li>
+                            <li><a class="dropdown-item" href="exemplo_form.html" target="_blank">Exemplo</a></li>
+                            <li><a class="dropdown-item" href="form_endereco.html" target="_blank">Endereço</a></li>
+                            <li><a class="dropdown-item" href="orcamento.html" target="_blank">Orçamento</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <!-- AULA 12 - Etapa 5: botão que troca o tema -->
+                <button type="button" id="btn-tema" class="btn btn-outline-secondary ms-auto">
+                    <i class="bi bi-moon-stars-fill"></i> Tema escuro
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="container py-5">
+        <h2 class="text-center mb-2">Loja do Viajante</h2>
+        <p class="text-center text-muted mb-5">Acessórios para deixar sua viagem mais tranquila.</p>
+
+        <!-- AULA 12 - Etapa 9: botões de filtro (data-filtro guarda o tipo de cada um) -->
+        <div id="filtros" class="d-flex flex-wrap align-items-center gap-3 mb-4">
+            <div class="btn-group" role="group" aria-label="Filtrar por preço">
+                <button type="button" class="btn btn-outline-primary active" data-filtro="todos">Todos</button>
+                <button type="button" class="btn btn-outline-primary" data-filtro="ate100">Até R$ 100</button>
+                <button type="button" class="btn btn-outline-primary" data-filtro="acima100">Acima de R$ 100</button>
+            </div>
+            <span id="contador" class="text-muted"></span>
+        </div>
+
+        <!-- AULA 12 - Etapa 8: vitrine VAZIA. O forEach cria os cards -->
+        <div id="vitrine" class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 mb-5"></div>
+
+        <!-- AULA 12 - Etapa 7: lista VAZIA. O loop do JavaScript cria os itens -->
+        <h3 id="titulo-lista" class="h5">Lista de preços</h3>
+        <ul id="lista-produtos" class="list-group mb-4"></ul>
+    </main>
+
+
+    
+    <footer> <!-- rodapé da página -->
+        <div class="footer-container">
+            <div class="footer-copy">
+                <p>&copy; 2026 Jornada Viagens. Todos os direitos reservados</p>
+            </div>
+            <!-- criar uma ancora de link -->
+            <a name="contato"></a>
+            <address class="footer-contato">
+                <h2>Contato</h2>
+                <p>Email: contato@jornadaviagens.com.br
+                <p>Tel/WhatsApp: (21)91234-1234
+            </address>
+            <nav class="footer-redes" aria-label="Redes Sociais">
+                <a href="https://pt-br.facebook.com/" target="_blank" aria-label="Facebook"
+                    data-bs-toggle="tooltip" data-bs-title="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"
+                    data-bs-toggle="tooltip" data-bs-title="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://x.com/" target="_blank" aria-label="X"
+                    data-bs-toggle="tooltip" data-bs-title="X (antigo Twitter)"><i class="bi bi-twitter-x"></i></a>
+            </nav>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    
+    
+    <script src="js/loja.js"></script>
+    <!-- AULA 12 - Etapa 6: tema claro/escuro -->
+    <script src="js/tema.js"></script>
+</body>
+
+</html>
